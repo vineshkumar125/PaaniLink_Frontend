@@ -1,0 +1,286 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ali Customer",
+      "email": "customer@paanilink.com",
+      "password": "12345678",
+      "role": "Customer",
+      "cnic": "42101-1234567-1",
+      "phone": "03001234567",
+      "address": "House 12, Gulshan-e-Iqbal",
+      "zoneId": 1,
+      "subsidyStatus": "Pending"
+    },
+    {
+      "id": 2,
+      "name": "Gulshan Officer",
+      "email": "Gulshan.officer@paanilink.com",
+      "password": "12345678",
+      "role": "Zone Officer",
+      "zoneId": 1
+    },
+    {
+      "id": 7,
+      "name": "North Nazimabad Officer",
+      "email": "north.officer@paanilink.com",
+      "password": "12345678",
+      "role": "Zone Officer",
+      "zoneId": 2
+    },
+    {
+      "id": 8,
+      "name": "Clifton Officer",
+      "email": "clifton.officer@paanilink.com",
+      "password": "12345678",
+      "role": "Zone Officer",
+      "zoneId": 3
+    },
+    {
+      "id": 3,
+      "name": "Ahmed Operator",
+      "email": "operator@paanilink.com",
+      "password": "12345678",
+      "role": "Hydrant Operator",
+      "hydrantId": 1
+    },
+    {
+      "id": 4,
+      "name": "Bilal Driver",
+      "email": "driver@paanilink.com",
+      "password": "12345678",
+      "role": "Driver"
+    },
+    {
+      "id": 5,
+      "name": "Admin User",
+      "email": "admin@paanilink.com",
+      "password": "12345678",
+      "role": "Administrator"
+    },
+    {
+      "name": "vinesh kumar",
+      "email": "vineshkumar@gmail.com",
+      "password": "12345678",
+      "cnic": "44444-4444444-4",
+      "phone": "03361026625",
+      "address": "karachi",
+      "zoneId": 3,
+      "role": "Customer",
+      "subsidyStatus": "Approved",
+      "id": 6
+    },
+    {
+      "name": "suneelkumar",
+      "email": "suneelkumar@gmail.com",
+      "password": "00000000",
+      "cnic": "44444-4444444-5",
+      "phone": "03363054779",
+      "address": "karachi",
+      "zoneId": 2,
+      "role": "Customer",
+      "subsidyStatus": "Approved",
+      "id": 9
+    }
+  ],
+  "zones": [
+    {
+      "id": 1,
+      "name": "Gulshan Zone"
+    },
+    {
+      "id": 2,
+      "name": "North Nazimabad"
+    },
+    {
+      "id": 3,
+      "name": "Clifton"
+    }
+  ],
+  "hydrants": [
+    {
+      "id": 1,
+      "name": "Gulshan Hydrant",
+      "zoneId": 1,
+      "quota": 20000,
+      "used": 6000,
+      "hours": "08:00 AM - 08:00 PM",
+      "status": "Available"
+    },
+    {
+      "id": 2,
+      "name": "North Hydrant",
+      "zoneId": 2,
+      "quota": 18000,
+      "used": 3000,
+      "hours": "07:00 AM - 07:00 PM"
+    },
+    {
+      "name": "Clifton hydrant",
+      "zoneId": 3,
+      "quota": 1000,
+      "used": 0,
+      "hours": "8",
+      "status": "Available",
+      "id": 3
+    }
+  ],
+  "tankers": [
+    {
+      "id": 1,
+      "number": "KHI-1001",
+      "capacity": 1000,
+      "hydrantId": 1,
+      "status": "Available"
+    },
+    {
+      "id": 2,
+      "number": "KHI-3002",
+      "capacity": 3000,
+      "hydrantId": 1,
+      "status": "Available"
+    },
+    {
+      "id": 3,
+      "number": "KHI-6003",
+      "capacity": 6000,
+      "hydrantId": 2,
+      "status": "Available"
+    }
+  ],
+  "drivers": [
+    {
+      "id": 1,
+      "name": "Bilal Ahmed",
+      "phone": "03001112222",
+      "status": "Available"
+    },
+    {
+      "id": 2,
+      "name": "Usman Khan",
+      "phone": "03003334444",
+      "status": "Available"
+    }
+  ],
+  "rates": [
+    {
+      "id": 1,
+      "type": "Commercial",
+      "ratePerGallon": 2
+    },
+    {
+      "id": 2,
+      "type": "Subsidised",
+      "ratePerGallon": 0.5
+    }
+  ],
+  "bookings": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "customerName": "Ali Customer",
+      "zoneId": 1,
+      "hydrantId": 1,
+      "type": "Commercial",
+      "capacity": 3000,
+      "address": "House 12, Gulshan-e-Iqbal",
+      "date": "2026-11-12",
+      "status": "Approved",
+      "amount": 6000,
+      "tankerId": 2,
+      "driverId": 1,
+      "tripStatus": "Dispatched",
+      "createdAt": "2026-11-10"
+    },
+    {
+      "id": 2,
+      "customerId": 1,
+      "customerName": "Ali Customer",
+      "zoneId": 1,
+      "hydrantId": 1,
+      "type": "Subsidised",
+      "capacity": 1000,
+      "address": "House 12, Gulshan-e-Iqbal",
+      "date": "2026-11-13",
+      "status": "Awaiting Approval",
+      "amount": 500,
+      "tankerId": null,
+      "driverId": null,
+      "tripStatus": "Pending",
+      "createdAt": "2026-11-10"
+    },
+    {
+      "customerId": 9,
+      "customerName": "suneelkumar",
+      "zoneId": 2,
+      "hydrantId": 2,
+      "type": "Subsidised",
+      "capacity": 3000,
+      "address": "karachi",
+      "date": "2026-11-17",
+      "status": "Awaiting Approval",
+      "amount": 1500,
+      "tankerId": null,
+      "driverId": null,
+      "tripStatus": "Pending",
+      "createdAt": "2026-11-14",
+      "id": 3
+    },
+    {
+      "customerId": 6,
+      "customerName": "vinesh kumar",
+      "zoneId": 3,
+      "hydrantId": 3,
+      "type": "Subsidised",
+      "capacity": 3000,
+      "address": "karachi",
+      "date": "2026-11-17",
+      "status": "Awaiting Approval",
+      "amount": 1500,
+      "tankerId": null,
+      "driverId": null,
+      "tripStatus": "Pending",
+      "createdAt": "2026-11-14",
+      "id": 4
+    }
+  ],
+  "subsidyApplications": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "customerName": "Ali Customer",
+      "zoneId": 1,
+      "proof": "Low income certificate",
+      "status": "Rejected",
+      "date": "2026-11-10"
+    },
+    {
+      "customerId": 1,
+      "customerName": "Ali Customer",
+      "zoneId": 1,
+      "proof": "low income",
+      "status": "Pending",
+      "date": "2026-11-14",
+      "id": 7
+    },
+    {
+      "customerId": 6,
+      "customerName": "vinesh kumar",
+      "zoneId": 3,
+      "proof": "hospital",
+      "status": "Approved",
+      "date": "2026-11-14",
+      "id": 8
+    },
+    {
+      "customerId": 9,
+      "customerName": "suneelkumar",
+      "zoneId": 2,
+      "proof": "low income",
+      "status": "Approved",
+      "date": "2026-11-14",
+      "id": 9
+    }
+  ],
+  "disputes": []
+}

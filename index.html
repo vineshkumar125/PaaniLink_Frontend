@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PaaniLink | Water Tanker Booking</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" id="brandHome"
+        ><span class="brand-icon">💧</span> PaaniLink</a
+      >
+      <div class="top-actions">
+        <span id="userBadge" class="user-badge hidden"></span>
+        <button id="logoutBtn" class="btn btn-outline hidden">Logout</button>
+      </div>
+    </header>
+
+    <main id="app">
+      <section id="loginView" class="auth-layout">
+        <div class="auth-intro">
+          <span class="eyebrow">CITY WATER BOARD</span>
+          <h1>Water, when<br /><span>you need it.</span></h1>
+          <p>
+            Book, approve, dispatch and track water tanker deliveries from one
+            simple platform.
+          </p>
+          <div class="auth-points">
+            <div>✓ Reliable tanker booking</div>
+            <div>✓ Transparent delivery tracking</div>
+            <div>✓ Subsidy support for eligible users</div>
+          </div>
+        </div>
+        <div class="auth-card">
+          <h2>Welcome back</h2>
+          <p class="muted">Sign in to your PaaniLink account</p>
+          <form id="loginForm" class="form">
+            <label for="loginEmail">Email address</label>
+            <input
+              id="loginEmail"
+              type="email"
+              placeholder="name@example.com"
+              required
+            />
+            <label for="loginPassword">Password</label>
+            <input
+              id="loginPassword"
+              type="password"
+              placeholder="Enter password"
+              required
+              minlength="4"
+            />
+            <button class="btn btn-primary full" type="submit">Sign in</button>
+            <p id="loginError" class="error"></p>
+          </form>
+          <p class="muted register-line">
+            New customer? <a href="#" id="showRegister">Create an account</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="registerView" class="auth-layout hidden">
+        <div class="auth-intro">
+          <span class="eyebrow">JOIN PAANILINK</span>
+          <h1>Create your<br /><span>account.</span></h1>
+          <p>
+            Register with your contact and address details to book water
+            tankers.
+          </p>
+        </div>
+        <div class="auth-card">
+          <h2>Customer registration</h2>
+          <p class="muted">Enter your details below</p>
+          <form id="registerForm" class="form">
+            <label for="regName">Full name</label>
+            <input
+              id="regName"
+              required
+              minlength="3"
+              placeholder="Your full name"
+            />
+            <label for="regEmail">Email address</label>
+            <input
+              id="regEmail"
+              type="email"
+              required
+              placeholder="name@example.com"
+            />
+            <label for="regPassword">Password</label>
+            <input
+              id="regPassword"
+              type="password"
+              required
+              minlength="8"
+              placeholder="At least 8 characters"
+            />
+            <label for="regCnic">CNIC</label>
+            <input
+              id="regCnic"
+              required
+              pattern="[0-9]{5}-[0-9]{7}-[0-9]"
+              placeholder="42101-1234567-1"
+            />
+            <label for="regPhone">Phone</label>
+            <input
+              id="regPhone"
+              required
+              pattern="[0-9+ -]{10,15}"
+              placeholder="03XX-XXXXXXX"
+            />
+            <label for="regAddress">Address</label>
+            <input
+              id="regAddress"
+              required
+              minlength="5"
+              placeholder="House, street and area"
+            />
+            <label for="regZone">Zone</label>
+            <select id="regZone" required>
+              <option value="">Select zone</option>
+            </select>
+            <button class="btn btn-primary full" type="submit">
+              Create account
+            </button>
+            <p id="registerError" class="error"></p>
+          </form>
+          <p class="muted register-line">
+            Already registered? <a href="#" id="showLogin">Sign in</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="dashboardView" class="hidden">
+        <div class="welcome-row">
+          <div>
+            <span class="eyebrow" id="roleLabel">DASHBOARD</span>
+            <h1 id="pageTitle">Dashboard</h1>
+            <p class="muted" id="pageSubtitle"></p>
+          </div>
+          <div class="date-chip" id="todayDate"></div>
+        </div>
+        <div id="stats" class="stats-grid"></div>
+        <div id="dashboardContent"></div>
+      </section>
+    </main>
+
+    <footer>© 2026 PaaniLink · City Water Board</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
